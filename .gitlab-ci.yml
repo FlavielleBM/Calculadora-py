@@ -1,5 +1,6 @@
 stages:
   - test
+  - build-run
 
 Test:
   stage: test
@@ -8,3 +9,12 @@ Test:
   image: python:slim
   tags:
     - gitlab-org-docker
+
+Build-Run:
+  stage: build-run
+  script:
+    - python -m src.calculadora.main
+  image: python:slim
+  tags:
+    - gitlab-org-docker
+    
