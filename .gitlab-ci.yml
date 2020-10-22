@@ -1,0 +1,10 @@
+stages:
+  - test
+
+Test:
+  stage: test
+  script:
+    - python -m unittest discover test
+  image: python:slim
+  tags:
+    - gitlab-org-docker
