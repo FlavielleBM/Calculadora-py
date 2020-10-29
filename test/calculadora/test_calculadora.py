@@ -15,3 +15,19 @@ class TestCalculadora(TestCase):
         calculadora.somar(10)
         calculadora.limpar()
         self.assertEqual(0, calculadora.valor)
+    
+    def test_deveExecutarUmaSoma(self):
+        calculadora = Calculadora(10)
+        calculadora.somar(20)
+        self.assertEqual(30, calculadora.valor)
+
+    def test_deveExecutarUmaDivisao(self):
+        calculadora = Calculadora(10)
+        calculadora.dividir(20)
+        self.assertEqual(0.5, calculadora.valor)
+
+    def test_deveExecutarUmaDivisaoComResultadoDaSoma(self):
+        calculadora = Calculadora(10)
+        calculadora.somar(20)
+        calculadora.dividir(20)
+        self.assertEqual(1.5, calculadora.valor)

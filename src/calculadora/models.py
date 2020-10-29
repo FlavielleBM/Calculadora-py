@@ -5,6 +5,8 @@ class Calculadora:
         self._valor += valor
     def limpar(self):
         self._valor = 0
+    def dividir(self,valor):
+        self._valor /= valor
     @property
     def valor(self):
         return self._valor
