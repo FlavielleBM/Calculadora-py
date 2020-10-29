@@ -3,6 +3,8 @@ class Calculadora:
         self._valor = valor
     def somar(self, valor):
         self._valor += valor
+    def limpar(self):
+        self._valor = 0
     @property
     def valor(self):
         return self._valor
